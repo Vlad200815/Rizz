@@ -1,9 +1,14 @@
 class Config {
   // Navigation
-  static const String DATE_REQUEST_PAGE_ROUTE = "/";
-  static const String DATE_PLANNER_PAGE_ROUTE = "/date_planner";
+  static const String dateRequestPageRoute = "/";
+  static const String datePlannerPageRoute = "/date_planner";
 
-  static const String APP_TITLE = "Rizz App";
+  static const String appTitle = "Rizz App";
 
-  static const String TELEGRAM_USERNAME = 'Vlad_Semeniuk_1';
+  // Telegram
+  static const String telegramUsername = 'Vlad_Semeniuk_1';
+
+  // Localization
+  static const String uk = "uk";
+  static const String en = "en";
 }

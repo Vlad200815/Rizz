@@ -1,16 +1,17 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:rizz/gen/colors.gen.dart';
 
-class Background extends StatefulWidget {
-  const Background({super.key});
+class BackgroundView extends StatefulWidget {
+  const BackgroundView({super.key});
 
   @override
-  State<Background> createState() => _Background();
+  State<BackgroundView> createState() => _BackgroundView();
 }
 
-class _Background extends State<Background> with TickerProviderStateMixin {
-  // 👈 Ticker бо контролерів багато
+class _BackgroundView extends State<BackgroundView>
+    with TickerProviderStateMixin {
   final List<_Particle> _particles = [];
   final List<AnimationController> _controllers = [];
 
@@ -31,7 +32,6 @@ class _Background extends State<Background> with TickerProviderStateMixin {
       final controller = AnimationController(vsync: this, duration: duration)
         ..repeat();
 
-      // зсув щоб не всі стартували одночасно
       controller.forward(from: rand.nextDouble());
 
       _controllers.add(controller);
@@ -49,6 +49,7 @@ class _Background extends State<Background> with TickerProviderStateMixin {
 
   @override
   void dispose() {
+    // Loop through all the controllers and dispose them
     for (final c in _controllers) {
       c.dispose();
     }
@@ -60,19 +61,23 @@ class _Background extends State<Background> with TickerProviderStateMixin {
     return Stack(
       fit: StackFit.expand,
       children: [
-        // градієнтний фон
+        // Gradient background
         Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFF1A0610), Color(0xFF2D0A1A), Color(0xFF1A0A10)],
+              colors: [
+                ColorName.roseBackgroundStart,
+                ColorName.roseBackgroundMiddle,
+                ColorName.roseBackgroundEnd,
+              ],
               stops: [0.0, 0.4, 1.0],
             ),
           ),
         ),
 
-        // частинки
+        // Participles
         ...List.generate(_particles.length, (i) {
           final p = _particles[i];
           return AnimatedBuilder(
@@ -91,7 +96,7 @@ class _Background extends State<Background> with TickerProviderStateMixin {
                     width: p.size,
                     height: p.size,
                     decoration: const BoxDecoration(
-                      color: Color(0xFFE8607A),
+                      color: ColorName.particle,
                       shape: BoxShape.circle,
                     ),
                   ),
@@ -105,7 +110,7 @@ class _Background extends State<Background> with TickerProviderStateMixin {
   }
 }
 
-// модель однієї частинки
+// Participle model
 class _Particle {
   final double startX;
   final double size;

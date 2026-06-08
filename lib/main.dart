@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:rizz/app.dart';
-import 'package:rizz/data_notifier/date_notifier.dart';
+import 'package:rizz/config.dart';
+import 'package:rizz/features/planner/planner_notifier.dart';
+import 'package:rizz/features/request/no_button_notifier.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,12 +17,17 @@ void main() async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => DateNotifier(),
+    // Providers
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => NoButtonNotifier()),
+        ChangeNotifierProvider(create: (_) => PlannerNotifier()),
+      ],
+
       child: EasyLocalization(
-        supportedLocales: [Locale('en'), Locale('uk')],
+        supportedLocales: [Locale(Config.en), Locale(Config.uk)],
         path: 'assets/translations',
-        fallbackLocale: Locale('en', 'US'),
+        fallbackLocale: Locale(Config.en),
         child: const RizzApp(),
       ),
     ),

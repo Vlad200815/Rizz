@@ -2,7 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:rizz/data_notifier/date_notifier.dart';
+import 'package:rizz/features/planner/planner_notifier.dart';
+import 'package:rizz/gen/colors.gen.dart';
 import 'package:rizz/generated/locale_keys.g.dart';
 
 class CalendarButton extends StatelessWidget {
@@ -10,12 +11,12 @@ class CalendarButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final canAdd = context.watch<DateNotifier>().canSend;
+    final canAdd = context.watch<PlannerNotifier>().canSend;
 
     return GestureDetector(
       onTap: canAdd
           ? () async {
-              await context.read<DateNotifier>().addToCalendar();
+              await context.read<PlannerNotifier>().addToCalendar();
               if (context.mounted) _showSnackbar(context);
             }
           : null,
@@ -24,12 +25,12 @@ class CalendarButton extends StatelessWidget {
         width: double.infinity,
         padding: const EdgeInsets.symmetric(vertical: 14),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.04),
+          color: Colors.white.withValues(alpha: 0.04),
           borderRadius: BorderRadius.circular(28),
           border: Border.all(
             color: canAdd
-                ? const Color(0xFF8040C0).withOpacity(0.5)
-                : const Color(0xFF3A1A5A).withOpacity(0.3),
+                ? ColorName.purpleAccent.withValues(alpha: 0.5)
+                : ColorName.cardBorder.withValues(alpha: 0.3),
             width: 0.5,
           ),
         ),
@@ -40,8 +41,8 @@ class CalendarButton extends StatelessWidget {
               Icons.calendar_month_rounded,
               size: 18,
               color: canAdd
-                  ? const Color(0xFFD0A0F0)
-                  : const Color(0xFF9060B0).withOpacity(0.4),
+                  ? ColorName.chipActive
+                  : ColorName.purpleTextMuted.withValues(alpha: 0.4),
             ),
             const SizedBox(width: 10),
             Text(
@@ -50,8 +51,8 @@ class CalendarButton extends StatelessWidget {
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
                 color: canAdd
-                    ? const Color(0xFFD0A0F0)
-                    : const Color(0xFF9060B0).withOpacity(0.4),
+                    ? ColorName.chipActive
+                    : ColorName.purpleTextMuted.withValues(alpha: 0.4),
                 letterSpacing: 0.04,
               ),
             ),
@@ -73,7 +74,7 @@ class CalendarButton extends StatelessWidget {
             ),
           ],
         ),
-        backgroundColor: const Color(0xFF2A1A4A),
+        backgroundColor: ColorName.darkPurple,
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         duration: const Duration(seconds: 2),

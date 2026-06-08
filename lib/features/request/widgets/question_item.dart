@@ -1,10 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rizz/gen/colors.gen.dart';
 import 'package:rizz/generated/locale_keys.g.dart';
 
-class Question extends StatelessWidget {
-  const Question({super.key});
+class QuestionItem extends StatelessWidget {
+  const QuestionItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class Question extends StatelessWidget {
         style: GoogleFonts.playfairDisplay(
           fontSize: 28,
           fontStyle: FontStyle.italic,
-          color: const Color(0xFFF5D0D8),
+          color: ColorName.roseTextPrimary,
           height: 1.4,
           letterSpacing: 0.01,
         ),

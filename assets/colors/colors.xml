@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General -->
+    <color name="surface">#FF1E0A16</color>
+
+    <!-- For DateRequestPage — Deep Rose -->
+    <color name="roseBackgroundStart">#FF1A0610</color>
+    <color name="roseBackgroundMiddle">#FF2D0A1A</color>
+    <color name="roseBackgroundEnd">#FF1A0A10</color>
+    <color name="pinkAccent">#F5007E</color>
+    <color name="roseAccent">#FFE8607A</color>
+    <color name="accentGreenStart">#FF6FCF7A</color>
+    <color name="accentGreenEnd">#FF4DB858</color>
+    <color name="lightGreen">#FF4DB858</color>
+    <color name="darkGreen">#FF1A3A1E</color>
+
+
+    <color name="accentRed">#FFE8607A</color>
+    <color name="roseTextPrimary">#FFF5D0D8</color>
+    <color name="roseTextMuted">#FFC87090</color>
+    <color name="particle">#FFE8607A</color>
+
+
+    <!-- For DatePlannerPage — Deep Purple -->
+    <color name="darkPurple">#FF2A1A4A</color>
+
+    <color name="purpleBackgroundStart">#FF10081A</color>
+    <color name="purpleBackgroundEnd">#FF1E0D2D</color>
+    <color name="purpleBackgroundDeep">#FF0F0814</color>
+    <color name="purpleAccent">#FF8040C0</color>
+    <color name="purpleAccentDark">#FF6020A0</color>
+    <color name="purpleChip">#FFA050C8</color>
+    <color name="cardBorder">#FF3A1A5A</color>
+    <color name="chipActive">#FFD0A0F0</color>
+    <color name="purpleTextPrimary">#FFF0D8F5</color>
+    <color name="purpleTextMuted">#FF9060B0</color>
+    <color name="purpleTextInput">#FFE8D0F0</color>
+    <color name="purpleTextActive">#FFD8A8F0</color>
+    <color name="purpleDisabledStart">#FF3A2A4A</color>
+    <color name="purpleDisabledEnd">#FF2A1A3A</color>
+
+
+</resources>

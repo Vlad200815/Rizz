@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:rizz/gen/colors.gen.dart';
 
-class Heart extends StatefulWidget {
-  const Heart({super.key});
+class HeartItem extends StatefulWidget {
+  const HeartItem({super.key});
 
   @override
-  State<Heart> createState() => _HeartState();
+  State<HeartItem> createState() => _HeartStateItem();
 }
 
-class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
+class _HeartStateItem extends State<HeartItem>
+    with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _scale;
 
@@ -73,7 +75,7 @@ class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFFE8607A).withOpacity(0.5),
+                  color: ColorName.accentRed.withValues(alpha: 0.5),
                   blurRadius: 40,
                   spreadRadius: 8,
                 ),

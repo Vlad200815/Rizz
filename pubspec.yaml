@@ -28,6 +28,7 @@ dependencies:
 
   # App icon launcher
   flutter_launcher_icons: "^0.14.4"
+  intl: ^0.20.2
 
 
 
@@ -38,6 +39,31 @@ dev_dependencies:
 
   flutter_lints: ^6.0.0
 
+  # Auto generate some files
+  build_runner: ^2.4.13
+  flutter_gen_runner: ^5.11.0
+
+
+# Config generate when build
+flutter_gen:
+  output: lib/gen/
+  line_length: 160
+
+  integrations:
+    flutter_svg: true
+
+  assets:
+    enabled: true
+
+  fonts:
+    enabled: true
+
+  colors:
+    enabled: true
+    inputs:
+      - assets/colors/colors.xml
+
+
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
@@ -46,10 +72,9 @@ flutter_launcher_icons:
   min_sdk_android: 21 # android min sdk min:16, default 21
 
 
-
-
 flutter:
   uses-material-design: true
+  generate: true
 
   fonts:
     - family: PlayfairDisplay
