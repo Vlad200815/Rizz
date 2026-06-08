@@ -1,0 +1,49 @@
+{
+  "date_request_page": {
+    "no_button": "Ні ✗",
+    "yes_button": "Так ✓",
+    "main_offer": "Підеш зі мною на\nпобачення?",
+
+    "rizz_phrases": {
+      "first": "Ну давай, я ж заради цього цілий Flutter додаток написав 🥺",
+      "second": "Палець зісковзнув, так? Спробуй ще раз",
+      "three": "Помилка 404: Вагомої причини сказати «Ні» не знайдено",
+      "four": "Збій у роботі кнопки. Будь ласка, натисніть «Так».",
+      "five": "Ти впевнена? Кнопка «Так» набагато симпатичніша 👉👈",
+      "six": "Ну добре, але... кнопка «Так» сумує за тобою"
+    }
+  },
+
+  "date_planner_page": {
+    "header_title": "Сплануй наше побачення 🌙",
+    "header_subtitle": "зроби його особливим",
+    "when_title": "Коли",
+    "where_title": "Де",
+    "where_hint_text": "затишне кафе на даху в центрі...",
+    "vibe_title": "Вайб",
+    "vibes": {
+      "romantic_tab": "Романтичний",
+      "casual_tab": "Повсякденний",
+      "adventure_tab": "Пригодний",
+      "surprise_me_tab": "Здивуй мене"
+    },
+
+    "note_title": "Нотатка",
+    "note_hint_text": "Я буду тою самою дівчиною, яка занадто багато посміхається...",
+    "add_to_calendar_button": "Додати в Календар",
+    "send_via_telegram_button": "Надіслати в Telegram",
+
+    "tg_message": {
+      "date_text": "Дата: ",
+      "time_text": "Час: ",
+      "place_text": "Місце",
+      "vibe_text": "Вайб: "
+    },
+
+    "open_calendar_message": "Відкриваю календар...",
+    "pick_date_text": "Вибери дату",
+    "pick_time_text": "Вибери час"
+
+
+  }
+}

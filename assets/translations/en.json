@@ -1,0 +1,48 @@
+{
+  "date_request_page": {
+    "no_button": "No ✗",
+    "yes_button": "Yes ✓",
+    "main_offer": "Will you go on a\ndate with me?",
+
+    "rizz_phrases": {
+      "first": "Come on, I made a Flutter app for this 🥺",
+       "second": "Your finger slipped, right? Try again",
+      "three": "Error 404: Good reason to say No",
+      "four": "Button malfunction. Please press Yes.",
+      "five": "Are you sure? Yes button is nicer 👉👈",
+      "six": "Okay but... the Yes button misses you"
+    }
+  },
+
+  "date_planner_page": {
+    "header_title": "Plan our date 🌙",
+    "header_subtitle": "make it special",
+    "when_title": "When",
+    "where_title": "Where",
+    "where_hint_text": "cozy rooftop cafe downtown...",
+    "vibe_title": "Vibe",
+    "vibes": {
+      "romantic_tab": "Romantic",
+      "casual_tab": "Casual",
+      "adventure_tab": "Adventure",
+      "surprise_me_tab": "Surprise me"
+    },
+
+    "note_title": "Note",
+    "note_hint_text": "I will be the one smiling too much...",
+    "add_to_calendar_button": "Add to Calendar",
+    "send_via_telegram_button": "Send via Telegram",
+
+    "tg_message": {
+      "date_text": "Date: ",
+      "time_text": "Time: ",
+      "place_text": "Place",
+      "vibe_text": "Vibe: "
+    },
+
+    "open_calendar_message": "Opening calendar...",
+    "pick_date_text": "Pick date",
+    "pick_time_text": "Pick time"
+
+  }
+}
