@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:rizz/generated/locale_keys.g.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CalendarService {
@@ -20,7 +22,7 @@ class CalendarService {
 
     final uri = Uri.https('calendar.google.com', '/calendar/render', {
       'action': 'TEMPLATE',
-      'text': '💛 Our Date',
+      'text': '💛 ${LocaleKeys.app_our_date_title.tr()}',
       'dates': '${_formatDate(startDate)}/${_formatDate(endDate)}',
       'details': '📍 $place\n\n💌 $note',
       'location': place,

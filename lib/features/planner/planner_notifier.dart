@@ -68,8 +68,9 @@ class PlannerNotifier extends ChangeNotifier {
     await CalendarService.addDateToCalendar(
       date: _selectedDate!,
       time: _selectedTime!,
-      //TODO: add this to localization
-      place: _place.isEmpty ? 'To be determined' : _place,
+      place: _place.isEmpty
+          ? LocaleKeys.date_planner_page_to_be_determined_text.tr()
+          : _place,
       note: _note,
     );
   }

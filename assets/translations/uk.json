@@ -1,4 +1,8 @@
 {
+  "app": {
+    "our_date_title": "Наше побачення"
+  },
+
   "date_request_page": {
     "no_button": "Ні ✗",
     "yes_button": "Так ✓",
@@ -42,7 +46,8 @@
 
     "open_calendar_message": "Відкриваю календар...",
     "pick_date_text": "Вибери дату",
-    "pick_time_text": "Вибери час"
+    "pick_time_text": "Вибери час",
+    "to_be_determined_text": "Буде визначено"
 
 
   }

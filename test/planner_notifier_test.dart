@@ -3,9 +3,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:rizz/features/planner/date_vibe.dart';
 import 'package:rizz/features/planner/planner_notifier.dart';
 
+import 'helpers/test_localization.dart';
+
 void main() {
   late PlannerNotifier notifier;
 
+  setUpAll(setupTestLocalization);
   setUp(() => notifier = PlannerNotifier());
 
   group('canSend', () {

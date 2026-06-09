@@ -32,8 +32,6 @@ class _BackgroundView extends State<BackgroundView>
       final controller = AnimationController(vsync: this, duration: duration)
         ..repeat();
 
-      controller.forward(from: rand.nextDouble());
-
       _controllers.add(controller);
 
       _particles.add(
@@ -41,6 +39,7 @@ class _BackgroundView extends State<BackgroundView>
           startX: rand.nextDouble(),
           size: 2 + rand.nextDouble() * 3,
           opacity: 0.2 + rand.nextDouble() * 0.4,
+          phase: rand.nextDouble(),
           controller: controller,
         ),
       );
@@ -85,7 +84,7 @@ class _BackgroundView extends State<BackgroundView>
             builder: (context, _) {
               final screenH = MediaQuery.of(context).size.height;
               final screenW = MediaQuery.of(context).size.width;
-              final progress = p.controller.value;
+              final progress = (p.controller.value + p.phase) % 1.0;
 
               return Positioned(
                 left: p.startX * screenW,
@@ -115,12 +114,14 @@ class _Particle {
   final double startX;
   final double size;
   final double opacity;
+  final double phase;
   final AnimationController controller;
 
   const _Particle({
     required this.startX,
     required this.size,
     required this.opacity,
+    required this.phase,
     required this.controller,
   });
 }

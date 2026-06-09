@@ -3,6 +3,8 @@
 // ignore_for_file: constant_identifier_names
 
 abstract class  LocaleKeys {
+  static const app_our_date_title = 'app.our_date_title';
+  static const app = 'app';
   static const date_request_page_no_button = 'date_request_page.no_button';
   static const date_request_page_yes_button = 'date_request_page.yes_button';
   static const date_request_page_main_offer = 'date_request_page.main_offer';
@@ -37,6 +39,7 @@ abstract class  LocaleKeys {
   static const date_planner_page_open_calendar_message = 'date_planner_page.open_calendar_message';
   static const date_planner_page_pick_date_text = 'date_planner_page.pick_date_text';
   static const date_planner_page_pick_time_text = 'date_planner_page.pick_time_text';
+  static const date_planner_page_to_be_determined_text = 'date_planner_page.to_be_determined_text';
   static const date_planner_page = 'date_planner_page';
 
 }

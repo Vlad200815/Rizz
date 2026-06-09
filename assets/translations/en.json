@@ -1,4 +1,8 @@
 {
+  "app": {
+    "our_date_title": "Our Date"
+  },
+
   "date_request_page": {
     "no_button": "No ✗",
     "yes_button": "Yes ✓",
@@ -42,7 +46,8 @@
 
     "open_calendar_message": "Opening calendar...",
     "pick_date_text": "Pick date",
-    "pick_time_text": "Pick time"
+    "pick_time_text": "Pick time",
+    "to_be_determined_text": "To be determined"
 
   }
 }

@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rizz/features/request/no_button_notifier.dart';
 
+import 'helpers/test_localization.dart';
+
 void main() {
   late NoButtonNotifier notifier;
 
   const screenSize = Size(400, 800);
   const buttonSize = Size(100, 48);
 
+  setUpAll(setupTestLocalization);
   setUp(() => notifier = NoButtonNotifier());
 
   test('starts with zero presses and no message', () {
