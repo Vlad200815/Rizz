@@ -182,73 +182,7 @@ url_launcher (externalApplication) → Telegram app / Calendar
 | `flutter_lints` `^6.0.0` | Recommended lint rules |
 | `flutter_test` (SDK) | Unit testing |
 
----
 
-## 🚀 Getting Started
-
-**Prerequisites**
-
-- Flutter SDK with Dart `^3.12.0` (Flutter 3.24+ recommended)
-- Android Studio / Xcode for device or emulator targets
-- A connected device or running emulator/simulator
-
-**Quick setup**
-
-```bash
-# 1. Install dependencies
-flutter pub get
-
-# 2. Generate localization keys (easy_localization)
-flutter pub run easy_localization:generate -S assets/translations
-flutter pub run easy_localization:generate -S assets/translations -f keys -o locale_keys.g.dart
-
-# 3. Generate assets / colors / fonts (flutter_gen) and launcher icons
-dart run build_runner build --delete-conflicting-outputs
-dart run flutter_launcher_icons
-
-# 4. Run
-flutter run
-```
-
-**Full clean build**
-
-```bash
-flutter clean
-flutter pub get
-dart run build_runner build --delete-conflicting-outputs
-flutter run
-```
-
-> ⚙️ Before shipping, set your own Telegram handle in `lib/config.dart` (`telegramUsername`).
-
----
-
-## 📦 Build
-
-### Android
-
-```bash
-# Debug APK
-flutter build apk --debug
-
-# Release APK
-flutter build apk --release
-
-# App Bundle for Play Store
-flutter build appbundle --release
-```
-
-### iOS
-
-```bash
-# Build for a connected device / simulator
-flutter build ios --release
-
-# Then archive & distribute via Xcode
-open ios/Runner.xcworkspace
-```
-
----
 
 ## 🧪 Code Quality
 
